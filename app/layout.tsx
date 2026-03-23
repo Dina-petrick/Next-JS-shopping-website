@@ -30,6 +30,13 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        <Script
+          src="https://sdk.resul.team/handlers/2f533ec9fd6348ae874877a03f155409.sdk"
+          strategy="beforeInteractive"
+          data-fcm_service_path="/firebase-messaging-sw.js"
+        />
+      </head>
       <body className="min-h-full flex flex-col bg-gray-50 text-gray-900 font-sans selection:bg-indigo-100 selection:text-indigo-900">
         <CartProvider>
           <Navbar />
